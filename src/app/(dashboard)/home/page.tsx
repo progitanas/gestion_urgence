@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect } from 'react';
@@ -18,13 +19,13 @@ export default function DashboardHomePage() {
 
     switch (user.role) {
       case 'patient':
-        router.replace('/dashboard/patient');
+        router.replace('/patient'); // Changed from /dashboard/patient
         break;
       case 'doctor':
-        router.replace('/dashboard/doctor');
+        router.replace('/doctor'); // Changed from /dashboard/doctor
         break;
       case 'staff':
-        router.replace('/dashboard/staff');
+        router.replace('/staff'); // Changed from /dashboard/staff
         break;
       default:
         router.replace('/login'); // Fallback if role is unknown or null

@@ -1,3 +1,4 @@
+
 import { DashboardCard } from '@/components/dashboard/dashboard-card';
 import { UserPlus, Users, Siren, AlertTriangle, CalendarPlus } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -21,7 +22,7 @@ export default function StaffDashboardPage() {
           icon={UserPlus}
           value={mockStaffData.newPatientsToday.toString()}
           description="Registered in the system today."
-          href="/dashboard/staff/add-patient"
+          href="/staff/add-patient" // Changed from /dashboard/staff/add-patient
           className="bg-primary/10"
         />
         <DashboardCard
@@ -29,7 +30,7 @@ export default function StaffDashboardPage() {
           icon={Siren}
           value={mockStaffData.totalEmergenciesLogged.toString()}
           description="Logged this month."
-          href="/dashboard/emergencies"
+          href="/emergencies" // Changed from /dashboard/emergencies
           className="bg-destructive/10"
         />
         <DashboardCard
@@ -50,19 +51,19 @@ export default function StaffDashboardPage() {
             title="Register New Patient" 
             description="Onboard new patients quickly."
             icon={UserPlus} 
-            href="/dashboard/staff/add-patient" 
+            href="/staff/add-patient" // Changed from /dashboard/staff/add-patient
           />
           <DashboardCard 
             title="Log New Emergency" 
             description="Create and dispatch emergency alerts."
             icon={AlertTriangle} 
-            href="/dashboard/staff/create-emergency" 
+            href="/staff/create-emergency" // Changed from /dashboard/staff/create-emergency
           />
           <DashboardCard 
             title="Manage Users" 
             description="Oversee user accounts and roles."
             icon={Users} 
-            href="/dashboard/staff/manage-users" 
+            href="/staff/manage-users" // Changed from /dashboard/staff/manage-users
           />
         </CardContent>
       </Card>

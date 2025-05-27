@@ -1,3 +1,4 @@
+
 'use client';
 
 import type { User, UserRole } from '@/types';
@@ -45,7 +46,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem(MOCK_USER_KEY, JSON.stringify(mockUser));
     setUser(mockUser);
     setIsLoading(false);
-    router.push('/dashboard/home');
+    router.push('/home'); // Changed from /dashboard/home
   };
 
   const logout = () => {

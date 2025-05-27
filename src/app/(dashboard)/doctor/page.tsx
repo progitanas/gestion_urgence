@@ -1,3 +1,4 @@
+
 import { DashboardCard } from '@/components/dashboard/dashboard-card';
 import { User, Siren, ListChecks, CalendarCheck2 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -32,7 +33,7 @@ export default function DoctorDashboardPage() {
           icon={User}
           value={mockDoctorData.activePatients.toString()}
           description="Patients currently under your care."
-          href="/dashboard/doctor/patients"
+          href="/doctor/patients" // Changed from /dashboard/doctor/patients
           className="bg-primary/10"
         />
         <DashboardCard
@@ -40,7 +41,7 @@ export default function DoctorDashboardPage() {
           icon={Siren}
           value={mockDoctorData.pendingEmergencies.toString()}
           description="Require immediate attention."
-          href="/dashboard/emergencies"
+          href="/emergencies" // Changed from /dashboard/emergencies
           className="bg-destructive/10"
         />
         <DashboardCard
@@ -89,8 +90,8 @@ export default function DoctorDashboardPage() {
           <CardTitle>Quick Actions</CardTitle>
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
-           <DashboardCard title="View Patient List" href="/dashboard/doctor/patients" icon={User} />
-           <DashboardCard title="Manage Emergencies" href="/dashboard/emergencies" icon={Siren} />
+           <DashboardCard title="View Patient List" href="/doctor/patients" icon={User} /> {/* Changed from /dashboard/doctor/patients */}
+           <DashboardCard title="Manage Emergencies" href="/emergencies" icon={Siren} /> {/* Changed from /dashboard/emergencies */}
         </CardContent>
       </Card>
 

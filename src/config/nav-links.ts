@@ -1,3 +1,4 @@
+
 import type { UserRole } from '@/types';
 import type { LucideIcon } from 'lucide-react';
 import { LayoutDashboard, UserPlus, Briefcase, User, Activity, Siren, CalendarDays, FileText, ShoppingCart, LogOut, AlertTriangle } from 'lucide-react';
@@ -12,58 +13,58 @@ export interface NavLink {
 
 export const navLinks: NavLink[] = [
   {
-    href: '/dashboard/home', // This will redirect based on role
+    href: '/home', // Changed from /dashboard/home
     label: 'Dashboard',
     icon: LayoutDashboard,
     roles: ['patient', 'doctor', 'staff'],
   },
   // Patient specific
   {
-    href: '/dashboard/patient/appointments',
+    href: '/patient/appointments', // Changed from /dashboard/patient/appointments
     label: 'My Appointments',
     icon: CalendarDays,
     roles: ['patient'],
   },
   {
-    href: '/dashboard/patient/records',
+    href: '/patient/records', // Changed from /dashboard/patient/records
     label: 'Medical Records',
     icon: FileText,
     roles: ['patient'],
   },
   {
-    href: '/dashboard/patient/prescriptions',
+    href: '/patient/prescriptions', // Changed from /dashboard/patient/prescriptions
     label: 'Prescriptions',
     icon: ShoppingCart, // Placeholder for prescription icon
     roles: ['patient'],
   },
   // Doctor specific
   {
-    href: '/dashboard/doctor/patients',
+    href: '/doctor/patients', // Changed from /dashboard/doctor/patients
     label: 'My Patients',
     icon: User, // Represents multiple patients or patient focus
     roles: ['doctor'],
   },
   {
-    href: '/dashboard/emergencies',
+    href: '/emergencies', // Changed from /dashboard/emergencies
     label: 'Emergencies',
     icon: Siren,
     roles: ['doctor', 'staff'],
   },
   // Staff specific
   {
-    href: '/dashboard/staff/add-patient',
+    href: '/staff/add-patient', // Changed from /dashboard/staff/add-patient
     label: 'Add Patient',
     icon: UserPlus,
     roles: ['staff'],
   },
   {
-    href: '/dashboard/staff/create-emergency',
+    href: '/staff/create-emergency', // Changed from /dashboard/staff/create-emergency
     label: 'Create Emergency',
     icon: AlertTriangle,
     roles: ['staff'],
   },
   {
-    href: '/dashboard/staff/manage-users',
+    href: '/staff/manage-users', // Changed from /dashboard/staff/manage-users
     label: 'Manage Users',
     icon: Briefcase,
     roles: ['staff'],

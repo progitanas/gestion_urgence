@@ -1,3 +1,4 @@
+
 import { DashboardCard } from '@/components/dashboard/dashboard-card';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -47,7 +48,7 @@ export default function PatientDashboardPage() {
         <DashboardCard
           title="Upcoming Appointment"
           icon={CalendarDays}
-          href="/dashboard/patient/appointments"
+          href="/patient/appointments" // Changed from /dashboard/patient/appointments
           className="bg-primary/10"
         >
           <p className="text-xl font-semibold text-foreground">{mockPatientData.nextAppointment.date}</p>
@@ -57,7 +58,7 @@ export default function PatientDashboardPage() {
         <DashboardCard
           title="Medical Records"
           icon={FileText}
-          href="/dashboard/patient/records"
+          href="/patient/records" // Changed from /dashboard/patient/records
            className="bg-accent/10"
         >
           <p className="text-md text-foreground">Last entry: {mockPatientData.recentRecord.title}</p>
@@ -68,7 +69,7 @@ export default function PatientDashboardPage() {
           title="Prescriptions"
           icon={Pill}
           value={`${mockPatientData.activePrescriptions} Active`}
-          href="/dashboard/patient/prescriptions"
+          href="/patient/prescriptions" // Changed from /dashboard/patient/prescriptions
           className="bg-green-500/10"
         >
           <p className="text-xs text-muted-foreground pt-1">Manage and view your prescriptions.</p>
